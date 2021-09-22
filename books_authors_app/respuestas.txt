@@ -1,0 +1,44 @@
+Crear el modelo de clase de libro
+ Crear el modelo de clase de autor
+ Crea y ejecuta los archivos de migración para crear las tablas en su base de datos.
+ Crea un archivo .txt donde guardará cada una de sus consultas desde abajo
+ Consulta: crea 5 libros con los siguientes nombres: C Sharp, Java, Python, PHP, Ruby
+ Consulta: Crea 5 autores diferentes: Jane Austen, Emily Dickinson, Fyodor Dostoevksy, William Shakespeare, Lau Tzu
+ Agregue un nuevo campo de texto en la tabla de autores llamado 'notas'.
+    notas = models.TextField()
+ Cree y ejecute los archivos de migración para actualizar la tabla en su base de datos.
+PAULA@DESKTOP-KALMCTB MINGW64 ~/PAULA AGUILAR/FULL STACK/django_project/book_authors_proj
+$ python manage.py makemigrations
+You are trying to add a non-nullable field 'notas' to authors without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+>>>
+Please enter some code, or 'exit' (with no quotes) to exit.
+>>> exit
+(bloq_env) 
+PAULA@DESKTOP-KALMCTB MINGW64 ~/PAULA AGUILAR/FULL STACK/django_project/book_authors_proj
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, books_authors_app, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+  Your models in app(s): 'books_authors_app' have changes that are not yet reflected in a migration, and so won't be applied.
+  Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
+(bloq_env)  
+ Consulta: cambie el nombre del libro de C Sharp a C #
+ Consulta: cambie el nombre del cuarto autor a Bill
+ Consulta: Asigna el primer autor a los primeros 2 libros.
+ Consulta: Asigne el segundo autor a los primeros 3 libros.
+ Consulta: Asigna el tercer autor a los primeros 4 libros.
+ Consulta: Asigne el cuarto autor a los primeros 5 libros (o en otras palabras, todos los libros)
+ Consulta: recupera a todos los autores del tercer libro
+ Consulta: eliminar al primer autor del tercer libro
+ Consulta: Agregue el quinto autor como uno de los autores del segundo libro.
+ Consulta: Encuentra todos los libros de los que el tercer autor es parte
+ Consulta: Encuentra todos los autores que contribuyeron al quinto libro.
+ Envíe su archivo .txt que contiene todas las consultas que ejecutó en el shell
